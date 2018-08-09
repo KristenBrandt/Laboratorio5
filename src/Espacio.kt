@@ -1,16 +1,26 @@
 class Espacio (
         var estaocupado: Boolean = false,
-        var columna: Int,
-        var fila: Int,
+        val columna: Int,
+        val fila: Int,
+        val id: String
        // este es string ya que puede ser un numero o letra
-        var identificador: String
 ) {
     fun estadoparque(){
         estaocupado != estaocupado
-        identificador = "@"
+    }
+
+    fun obtenerColumna(): Int{
+        return columna
+    }
+
+    fun obtenerFila(): Int{
+        return fila
+    }
+    fun getIdenti(): String{
+        return id
     }
 
     override fun toString(): String {
-        return identificador
+        return id
     }
 }

@@ -1,10 +1,11 @@
 class Wall (
-        var columna: Int,
-        var fila: Int
-    ){
+        val columna: Int,
+        val fila: Int
+) {
     override fun toString(): String {
         return "*"
     }
-
 }
+
+
 
