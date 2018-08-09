@@ -25,24 +25,24 @@ class Parqueo(
 
 
     fun crearNivel(lugar: String, name: String, color: String, idetificador: String): Nivel {
-        val lineList: ArrayList<String> = ArrayList()
+        val lineList: ArrayList<Array<String>> = ArrayList()
         try {
             val inputStream: InputStream = File("/Users/kristen/Desktop/Laboratorio5/$lugar.txt").inputStream()
-            inputStream.bufferedReader().useLines { lines -> lines.forEach { lineList.add(it)} }
+            //inputStream.bufferedReader().useLines { lines -> lines.forEach { lineList.add(it)} }
 
         } catch (e: IOException) {
             println("El nombre del archivo no era correcto, no se encontro un archivo con ese nombre.")
         }
     val NewMapLevel = Nivel(lugar, name, color, idetificador)
     var i: Int = 0
-    for (linea: String in lineList) {
-        for (columna: String in lineList)
+        for (linea: Array<String> in lineList) {
+            for (columna: Array<String> in lineList)
             linea.forEach {
                 var j: Int = 0
                 val character = lineList[i][j]
-                when (character) {
+               /** when (character) {
                     // TODO Convertir String a Char
-                   /** " " -> {
+                    " " -> {
                     }
                     "*" -> {
                         val newWall = Wall(i,j)
@@ -52,14 +52,14 @@ class Parqueo(
                         val item = character
                         NewMapLevel.puedeParkear(item)
                     }
-                }**/
+                } **/
 
 
             }
     }
-}
         return NewMapLevel
 }
+
 
 
 

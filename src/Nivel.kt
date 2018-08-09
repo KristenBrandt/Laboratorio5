@@ -33,18 +33,19 @@ class Nivel(
             item in "A".."Z" || item in "a".."z"
         }
     }
+    /**fun agregarEspacio(espacio: Espacio) {
+    //TODO VER SI ESPACIO ES VALIDO
+    espacios.add(espacio)
+    }**/
+    fun getNivel(nivel:Nivel):String {
+        return name
+    }
+
 }
 
-        /**fun agregarEspacio(espacio: Espacio) {
-            //TODO VER SI ESPACIO ES VALIDO
-            espacios.add(espacio)
-        }
 
-        fun agregarCarro(carro: Carro) {
-            carros.add(carro)
-        }
 
-        // TODO fun getNivel()**/
+
 
 
 

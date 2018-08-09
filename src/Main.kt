@@ -33,7 +33,7 @@ fun main (args:Array<String>) {
     var admin = false
     var start = true
     var cliente = false
-    val parqueo: Parqueo = Parqueo()
+    val Parqueo: Parqueo = Parqueo()
     var keepProgram = true
     do {
         println(Menu1(start, admin, cliente))
@@ -67,8 +67,8 @@ fun main (args:Array<String>) {
                     println("Ingrese el lugar donde esta el archivo:")
                     val lugar = readLine()
                     // TODO crear el nuevo nivel o ver si ya esta creado
-                   // val newLevel = parqueo.crearNivel(lugar,name, color, identificador)
-                            //parqueo.agregarNivel()
+                   // val newMapNivel = Parqueo.crearNivel(identificador,name,color,lugar)
+                    //Parqueo.agregarNivel()
 
                 }
                 "2" -> {
